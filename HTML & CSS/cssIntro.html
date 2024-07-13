@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors and Properties Example</title>
+    <style>
+        /* CSS Syntax */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Simple Selectors */
+        h1 {
+            color: blue; /* Element Selector */
+        }
+
+        .intro {
+            color: green; /* Class Selector */
+        }
+
+        #main-title {
+            color: red; /* ID Selector */
+        }
+
+        /* Attribute Selector */
+        a[target="_blank"] {
+            color: purple;
+        }
+
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Combinator Selectors */
+        .container p {
+            color: navy; /* Descendant Selector */
+        }
+
+        .container > p {
+            font-weight: bold; /* Child Selector */
+        }
+
+        h1 + p {
+            font-style: italic; /* Adjacent Sibling Selector */
+        }
+
+        h1 ~ p {
+            text-decoration: underline; /* General Sibling Selector */
+        }
+
+        /* Pseudo-classes */
+        a:hover {
+            color: orange;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        a:visited {
+            color: grey;
+        }
+
+        input:focus {
+            border-color: blue;
+        }
+
+        li:nth-child(odd) {
+            background-color: lightgrey;
+        }
+
+        li:first-child {
+            font-weight: bold;
+        }
+
+        li:last-child {
+            font-style: italic;
+        }
+
+        /* Pseudo-elements */
+        p::before {
+            content: "Start: ";
+            color: grey;
+        }
+
+        p::after {
+            content: " :End";
+            color: grey;
+        }
+
+        p::first-line {
+            text-transform: uppercase;
+        }
+
+        p::first-letter {
+            font-size: 2em;
+            color: red;
+        }
+
+        /* CSS Fonts */
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('customfont.woff2') format('woff2');
+        }
+
+        .custom-font {
+            font-family: 'CustomFont';
+        }
+
+        /* CSS Positions */
+        .static {
+            position: static;
+        }
+
+        .relative {
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        /* CSS Float */
+        .float-left {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .float-right {
+            float: right;
+            margin-left: 10px;
+        }
+
+        .float-none {
+            float: none;
+        }
+
+        /* CSS Display */
+        .block {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .inline-block {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        /* CSS Units */
+        .absolute-units {
+            width: 10cm;
+            height: 100mm;
+            margin: 2in;
+            background-color: lightblue;
+        }
+
+        .relative-units {
+            padding: 2em;
+            font-size: 1.5rem;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">CSS Overview</h1>
+    <p class="intro">This is an introduction to CSS.</p>
+
+    <section class="container">
+        <p>This paragraph is inside a container.</p>
+        <p>Another paragraph inside the container.</p>
+        <h1>Sibling Selectors</h1>
+        <p>This paragraph is adjacent to an h1.</p>
+        <p>This paragraph is a general sibling to an h1.</p>
+    </section>
+
+    <a href="https://www.example.com" target="_blank">Example Link</a>
+    <input type="text" placeholder="Focus me">
+
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+        <li>Fourth Item</li>
+    </ul>
+
+    <p>This is a paragraph to demonstrate pseudo-elements.</p>
+
+    <div class="custom-font">This text uses a custom font.</div>
+
+    <div class="static">Static Position</div>
+    <div class="relative">Relative Position</div>
+    <div class="absolute">Absolute Position</div>
+    <div class="fixed">Fixed Position</div>
+
+    <div class="float-left">Float Left</div>
+    <div class="float-right">Float Right</div>
+    <div class="float-none">Float None</div>
+
+    <div class="block">Block Element</div>
+    <span class="inline">Inline Element</span>
+    <div class="inline-block">Inline-Block Element</div>
+
+    <div class="absolute-units">Absolute Units</div>
+    <div class="relative-units">Relative Units</div>
+</body>
+</html>
