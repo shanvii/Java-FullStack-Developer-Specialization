@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing Example</title>
+    <style>
+        .box-content {
+            width: 300px;
+            padding: 20px;
+            border: 10px solid green;
+            margin: 10px;
+            background-color: lightgray;
+            box-sizing: content-box; /* default */
+        }
+
+        .box-border {
+            width: 300px;
+            padding: 20px;
+            border: 10px solid blue;
+            margin: 10px;
+            background-color: lightcoral;
+            box-sizing: border-box; /* includes border and padding in the width */
+        }
+    </style>
+</head>
+<body>
+    <h2>Box Sizing Example</h2>
+    <div class="box-content">
+        Content-box: Width includes only the content.
+        
+    </div>
+    <div class="box-border">
+        Border-box: Width includes border and padding.
+    </div>
+</body>
+</html>
