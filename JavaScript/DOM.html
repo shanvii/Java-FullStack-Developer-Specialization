@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>DOM Selectors</h1>
+
+    <div id="hello">Hello World</div>
+    <div>Hi there</div>
+
+    <ul>
+        <li class="green">Item 1</li>
+        <li>Item 2</li>
+        <li class="green">Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <script>
+        // Single element selector
+        console.log(document.getElementById('hello'));
+
+        // Multiple element selector (class) - returns HTMLCollection
+        let items = document.getElementsByClassName('green');
+        console.log(items);
+
+        // Multiple element selector (tag) - returns HTMLCollection
+        let items2 = document.getElementsByTagName('li');
+        console.log(items2);
+
+        // Query selector - returns first element that matches the selector
+        let item = document.querySelector('.green')
+        console.log(item);
+
+        // Query selector all - returns NodeList of all elements that match the selector
+        let items3 = document.querySelectorAll('.green');
+        console.log(items3);
+    </script>
+
+</body>
+</html>
