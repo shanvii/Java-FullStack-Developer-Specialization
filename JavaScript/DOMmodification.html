@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Modification</title>
+</head>
+<body>
+    <h1>DOM Modification</h1>
+
+    <div>
+        <span id="one" name="First">First Span</span>
+        <span id="two" name="Second">Second Span</span>
+    </div>
+    <script>
+        const div = document.querySelector('div');
+        const spanOne = document.querySelector('one');
+        const spanTwo = document.querySelector('two');
+
+        console.log(spanOne.getAttribute('name'));
+
+        // Set the attribute of the first span element to 'First Span Element'
+        spanOne.setAttribute('name', 'First Span Element');
+
+        // Remove the attribute of the first span element
+        spanOne.removeAttribute('name');
+
+        spanOne.id = 'jdkjdckdc ';
+
+        // Create a new span element
+        const newSpan = document.createElement('span');
+
+        // Set the id of the new span element to 'three'
+        newSpan.id = 'three';
+
+        // Set the text content of the new span element to 'Third Span'
+        newSpan.textContent = 'Third Span';
+
+        // Append the new span element to the div element
+        div.appendChild(newSpan);
+    </script>
+</body>
+</html>
