@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Favourite Fruits</h1>
+
+    <ul id="foodList">
+        <li>Pizza</li>
+        <li>Burger</li>
+        <li>Sushi</li>
+        <li>Ice Cream</li>  
+    </ul>
+
+    <button id="addBtn">Add Tacos</button>
+    <button id="removeBtn">Remove Sushi</button>
+
+    <script>
+        const addBtn = document.querySelector('#addBtn')
+        const removeBtn = document.querySelector('#removeBtn')
+        const foodList = document.querySelector('#foodList')
+
+        addBtn.addEventListener('click', () => {
+            const newListItem = document.createElement('li')
+            const newListItemText = document.createTextNode('Tacos')
+
+            newListItem.append(newListItemText)
+            foodList.append(newListItem)
+        })
+
+        removeBtn.addEventListener('click', () => {
+            const sushi = document.querySelector('li:nth-child(3)')
+
+            foodList.removeChild(sushi)
+        })
+    </script>
+</body>
+</html>
