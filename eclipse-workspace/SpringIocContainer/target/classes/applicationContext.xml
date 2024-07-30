@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- setter based DI, here property is setter property -->
+	<bean id="HelloWorld" class="com.courseraSpringContainer.spring.ioc.HelloWorld">
+		<!-- value printed as message on console given here -->
+		<property name="message" value="Hello World using setter based DI"/>
+	</bean>
+	
+	<!-- constructor based DI, here constructors are used -->
+	<bean id="HelloWorldAnother" class="com.courseraSpringContainer.spring.ioc.HelloWorld">
+		<constructor-arg name="messgae" value="Hello World using Constructor based DI"/>
+	</bean>
+
+</beans>
